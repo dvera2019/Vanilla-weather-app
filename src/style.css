@@ -1,3 +1,21 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 30px;
+}
 h1 {
-  color: pink;
+  color: #878787;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
 }
