@@ -16,27 +16,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>New York</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-md-6">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQBJREFUaN7t2csNwyAMBmBGYYSMwhgdgxEYjRW6ARu4HNyqB0CKednElf5b2/hLSALGAICRHKMABSjgUMDdD7xfLifkxByoJOJ33O3/nwHIhVgsKDWKriXhb+0WQD6wJxZegvhlADzrcUDhpeFlpwLyAa5BZ711Na4pgAXFNxFdABw2K4r/R9iRgLiw+N89MQSATxvYFN8F2DB0qkOJCggbi/8m9AASA0AiAXBuA0ziKIDACBAogMgIECkAYBUFKEABzwOIf4yKf5HJnkqIn8wxmk775y5oxC8pj1jUH9FWEd/YOqK1eERz94j2euFqUCF7NzjYbzHpLqUCFKCAJfkAq7RimK7qUtAAAAAASUVORK5CYII="
-            />
-            12 &degC | &degF
-          </div>
-          <div class="col-md-6">
-            <ul>
-              <li>Wind Speed: 17 mph</li>
-              <li>Humidity: 10%</li>
-            </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <h1>New York</h1>
+          <ul>
+            <li>Friday 05:00</li>
+            <li>Clear</li>
+          </ul>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex weather-temperature">
+                <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQBJREFUaN7t2csNwyAMBmBGYYSMwhgdgxEYjRW6ARu4HNyqB0CKednElf5b2/hLSALGAICRHKMABSjgUMDdD7xfLifkxByoJOJ33O3/nwHIhVgsKDWKriXhb+0WQD6wJxZegvhlADzrcUDhpeFlpwLyAa5BZ711Na4pgAXFNxFdABw2K4r/R9iRgLiw+N89MQSATxvYFN8F2DB0qkOJCggbi/8m9AASA0AiAXBuA0ziKIDACBAogMgIECkAYBUFKEABzwOIf4yKf5HJnkqIn8wxmk775y5oxC8pj1jUH9FWEd/YOqK1eERz94j2euFqUCF7NzjYbzHpLqUCFKCAJfkAq7RimK7qUtAAAAAASUVORK5CYII=""
+                alt="Clear" id="icon" />
+                <div>
+                  <strong id="temperature">12</strong>
+                  <span class="units">&degC |<a href="#">&degF</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Wind Speed: 17 mph</li>
+                <li>Humidity: 10%</li>
+              </ul>
+            </div>
           </div>
         </div>
-
         <small>
           <a
             href="https://github.com/dvera2019/Vanilla-weather-app"
