@@ -1,11 +1,19 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .weather-app {
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
+  color: #57385c;
+
   padding: 30px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 246, 236) 39.5%,
+    rgba(100, 46, 122, 0.23) 100.2%
+  );
+  border: 5px double rgba(26, 6, 52, 0.2);
+  border-radius: 11px;
+  box-shadow: 11px 12px 18px 3px rgba(57, 7, 108, 0.2);
 }
 h1 {
   color: #878787;
