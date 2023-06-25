@@ -1,9 +1,17 @@
 function displayTemp(response) {
-  console.log(response.data);
+  console.log(response.data.wind.speed);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.city;
+  cityElement.innerHTML = response.data.city;
+  let countryElement = document.querySelector("#country");
+  countryElement.innerHTML = response.data.country;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 let apiKey = "0bfe478a8b8a7te3aao74dc34b69a3b6";
