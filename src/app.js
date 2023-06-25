@@ -59,6 +59,8 @@ function handleSubmit(event) {
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
+  convertToCelsius.classList.remove("active");
+  convertToFahrenheit.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
@@ -66,6 +68,8 @@ function showFahrenheitTemp(event) {
 
 function showCelsiusTemp(event) {
   event.preventDefault();
+  convertToCelsius.classList.add("active");
+  convertToFahrenheit.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
@@ -74,8 +78,8 @@ let celsiusTemp = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let convertToFarhenheit = document.querySelector("#fahrenheit-temp");
-convertToFarhenheit.addEventListener("click", showFahrenheitTemp);
+let convertToFahrenheit = document.querySelector("#fahrenheit-temp");
+convertToFahrenheit.addEventListener("click", showFahrenheitTemp);
 
 let convertToCelsius = document.querySelector("#celsius-temp");
 convertToCelsius.addEventListener("click", showCelsiusTemp);
