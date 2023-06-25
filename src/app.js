@@ -64,11 +64,20 @@ function showFahrenheitTemp(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
 let celsiusTemp = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let convertToFarhenheit = document.querySelector("#fahrenheit-temp");
 convertToFarhenheit.addEventListener("click", showFahrenheitTemp);
+
+let convertToCelsius = document.querySelector("#celsius-temp");
+convertToCelsius.addEventListener("click", showCelsiusTemp);
 
 search("London");
