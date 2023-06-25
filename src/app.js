@@ -24,10 +24,9 @@ function formatDate(timestamp) {
 }
 
 function displayTemp(response) {
-  console.log(response.data.condition.icon);
-
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  celsiusTemp = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
   let countryElement = document.querySelector("#country");
@@ -57,7 +56,18 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-search("London");
 
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+let celsiusTemp = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let convertToFarhenheit = document.querySelector("#fahrenheit-temp");
+convertToFarhenheit.addEventListener("click", showFahrenheitTemp);
+
+search("London");
