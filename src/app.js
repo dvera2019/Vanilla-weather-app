@@ -22,6 +22,10 @@ function formatDate(timestamp) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "forecast";
+}
 
 function displayTemp(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -75,6 +79,8 @@ function showCelsiusTemp(event) {
 }
 
 let celsiusTemp = null;
+displayForecast();
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
