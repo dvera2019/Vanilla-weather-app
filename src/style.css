@@ -62,6 +62,7 @@ li::first-letter {
 .weather-forecast {
   text-align: center;
   margin-top: 20px;
+  color: black;
 }
 .weather-forecast-date {
   font-size: 16px;
